@@ -7,3 +7,28 @@ document.getElementById("change_text").addEventListener("click",function() {
 		divs[i].innerText = newText[i]; 
 	}
 })
+
+//Calculator
+document.getElementById("calculate").addEventListener("click",function () {
+	const num1 = document.getElementById("num1");
+	const num2 = document.getElementById("num2");
+	let result;
+
+	switch(operator){
+		case "+": 
+			result = num1 + num2;
+			break;
+		case "-":
+			result = num1 - num2;
+			break;
+		case "*":
+			result = num1 * num2;
+			break;
+		case "/":
+			result = num2 != 0? num1/num2 : "Cannot divide by zero";
+			break;		
+	}
+
+	document.getElementById(result).innerText = "Result " + result;
+	
+})
